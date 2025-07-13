@@ -17,7 +17,8 @@ feature_label = ['IC_DeepFeature1147', 'Zeff_DeepFeature1540', 'VMI_exponential_
                  'PEI_DeepFeature1021', 'VMI_DeepFeature1817', 'VMI_logarithm_glszm_SmallAreaLowGrayLevelEmphasis', 
                  'IC_DeepFeature1877', 'PEI_DeepFeature1218', 'Zeff_wavelet-HHL_gldm_DependenceVariance', 
                  'IC_original_glszm_GrayLevelNonUniformity', 'Zeff_wavelet-HLL_glszm_SizeZoneNonUniformityNormalized', 
-                 'IC_wavelet-LLH_ngtdm_Coarseness', 'Zeff_DeepFeature763', 'IC_DeepFeature1130', 'IC_DeepFeature1791']
+                 'IC_wavelet-LLH_ngtdm_Coarseness', 'Zeff_DeepFeature763', 'IC_DeepFeature1130', 'IC_DeepFeature1791', 
+                 'Symptomatic events', 'Plaque ulceration']  # Added new features
 
 # 3. Streamlit input
 st.title('Web Predictor for Post-CAS NIILs')

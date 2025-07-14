@@ -28,9 +28,17 @@ st.sidebar.header('Input Features')
 inputs = {}
 for feature in feature_label:
     if feature in ['Symptomatic events', 'Plaque ulceration']:
-        inputs[feature] = st.sidebar.radio(feature, options=['No', 'Yes'], index=0)  # Limiting input to Yes or No
+        # Limiting input to Yes or No
+        inputs[feature] = st.sidebar.radio(feature, options=['No', 'Yes'], index=0)  
     else:
         inputs[feature] = st.sidebar.number_input(feature, min_value=-10.0, max_value=10.0, value=0.0)
+
+# Convert 'Yes' to 1 and 'No' to 0 for categorical features
+for feature in ['Symptomatic events', 'Plaque ulceration']:
+    if inputs[feature] == 'Yes':
+        inputs[feature] = 1
+    else:
+        inputs[feature] = 0
 
 # Convert input values into a Pandas DataFrame
 input_df = pd.DataFrame([inputs])

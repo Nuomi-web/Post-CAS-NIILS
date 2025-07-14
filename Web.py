@@ -28,7 +28,7 @@ st.sidebar.header('Input Features')
 inputs = {}
 for feature in feature_label:
     if feature in ['Symptomatic events', 'Plaque ulceration']:
-        inputs[feature] = st.sidebar.radio(feature, options=[0, 1], index=0)  # Limiting input to 0 or 1
+        inputs[feature] = st.sidebar.radio(feature, options=['No', 'Yes'], index=0)  # Limiting input to Yes or No
     else:
         inputs[feature] = st.sidebar.number_input(feature, min_value=-10.0, max_value=10.0, value=0.0)
 

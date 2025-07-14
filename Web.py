@@ -27,7 +27,10 @@ st.sidebar.header('Input Features')
 # Input feature form
 inputs = {}
 for feature in feature_label:
-    inputs[feature] = st.sidebar.number_input(feature, min_value=-10.0, max_value=10.0, value=0.0)
+    if feature in ['Symptomatic events', 'Plaque ulceration']:
+        inputs[feature] = st.sidebar.radio(feature, options=[0, 1], index=0)  # Limiting input to 0 or 1
+    else:
+        inputs[feature] = st.sidebar.number_input(feature, min_value=-10.0, max_value=10.0, value=0.0)
 
 # Convert input values into a Pandas DataFrame
 input_df = pd.DataFrame([inputs])
